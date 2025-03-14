@@ -1,0 +1,91 @@
+body {
+  background-color: white;
+
+  color: #6a0dad;
+
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.fade-text {
+  font-size: 2rem;
+
+  opacity: 0;
+
+  transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+#registration-box {
+  background-color: rgba(106, 13, 173, 0.9);
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  width: 80%;
+
+  max-width: 350px;
+
+  color: white;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.registration-show {
+  opacity: 1 !important;
+
+  transform: translateY(0) !important;
+}
+
+input {
+  display: block;
+
+  width: 90%;
+
+  margin: 10px auto;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 5px;
+}
+
+button {
+  background-color: #d63384;
+
+  color: white;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  width: 95%;
+
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Приветствие</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <h1 id="greeting" class="fade-text">Привет!</h1>
+
+  <h2 id="instruction" class="fade-text hidden">Чтобы продолжить, пройди регистрацию</h2>
+
+  <div id="registration-box" class="registration-hidden">
+
+    <h2>Регистрация</h2>
+
+    <input type="text" id="last_name" placeholder="Фамилия">
+
+    <input type="text" id="first_name" placeholder="Имя">
+
+    <input type="text" id="middle_name" placeholder="Отчество">
+
+    <input type="date" id="birth_date">
+
+    <input type="time" id="birth_time">
+
+    <button onclick="register()">Зарегистрироваться</button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

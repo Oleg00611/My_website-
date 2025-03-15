@@ -51,7 +51,7 @@ body {
 
   border-radius: 5px;
 
-  front-size: 32px !important;
+  front-size: 32px;
 }
 
 #registration button {

@@ -10,25 +10,29 @@
 
   <title>Приветствие</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
 
-  <h1 id="greeting" class="fade-text">Привет!</h1>
+  <div id="welcome-screen">
 
-  <h2 id="instruction" class="fade-text hidden">Чтобы продолжить, пройди регистрацию</h2>
+    <h1 id="welcome-text">Привет!</h1>
 
-  <div id="registration-box" class="registration-hidden">
+    <h2 id="register-text">Чтобы продолжить, пройди регистрацию</h2>
 
-    <h2>Регистрация</h2>
+  </div>
 
-    <input type="text" id="last_name" placeholder="Фамилия">
+  <div id="registration" class="hidden">
 
-    <input type="text" id="first_name" placeholder="Имя">
+    <h1>Регистрация</h1>
 
-    <input type="text" id="middle_name" placeholder="Отчество">
+    <input type="text" id="fullname" placeholder="Фамилия">
+
+    <input type="text" id="name" placeholder="Имя">
+
+    <input type="text" id="patronymic" placeholder="Отчество">
 
     <input type="date" id="birth_date">
 
@@ -41,5 +45,4 @@
   <script src="script.js"></script>
 
 </body>
-
 </html>

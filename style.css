@@ -1,91 +1,93 @@
 body {
-  background-color: white;
-
-  color: #6a0dad;
+  font-family: Arial, sans-serif;
 
   text-align: center;
 
-  font-family: Arial, sans-serif;
+  background: white;
+
+  color: black;
+}
+
+/* Приветствие */
+
+#welcome-screen {
+  position: fixed;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: white;
 
   display: flex;
 
   flex-direction: column;
 
   justify-content: center;
+  height: 600px;
+  margin: 500px auto;
 
-  align-items: center;
+  padding: 30px;
 
-  height: 100vh;
-
-  overflow: hidden;
-}
-
-.fade-text {
-  font-size: 2rem;
-
-  opacity: 0;
-
-  transition: opacity 1s ease-in-out;
-}
-
-.hidden {
-  display: none;
-}
-
-#registration-box {
-  background-color: rgba(106, 13, 173, 0.9);
-
-  padding: 20px;
-
-  border-radius: 10px;
-
-  text-align: center;
-
-  width: 80%;
-
-  max-width: 350px;
+  background: #8a2be2;
 
   color: white;
 
+  border-radius: 50px;
+
   opacity: 0;
 
-  transform: translateY(20px);
-
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  animation: fadeIn 1s 4s forwards;
 }
 
-.registration-show {
-  opacity: 1 !important;
-
-  transform: translateY(0) !important;
-}
-
-input {
-  display: block;
-
+#registration input {
   width: 90%;
 
-  margin: 10px auto;
+  padding: 25px;
 
-  padding: 10px;
+  margin: 10px 0;
 
   border: none;
 
   border-radius: 5px;
+
+  front-size: 32px !important;
 }
 
-button {
-  background-color: #d63384;
+#registration button {
+  background: #ff1493;
 
   color: white;
 
-  padding: 10px;
+  border: none;
+
+  padding: 17px;
+
+  width: 100%;
+
+  border-radius: 5px;
+  width: 100px;
+
+  height: 100px;
+
+  background: gray;
+
+  border-radius: 50%;
+
+  margin: auto;
+}
+
+.edit-btn,
+.add-btn {
+  background: #ff1493;
+
+  color: white;
 
   border: none;
 
-  border-radius: 5px;
+  padding: 10px;
 
-  width: 95%;
+  border-radius: 5px;
 
   cursor: pointer;
 }

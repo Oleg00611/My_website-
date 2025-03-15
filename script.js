@@ -1,41 +1,67 @@
-setTimeout(() => {
-  document.getElementById("greeting").style.opacity = "1";
-}, 500);
+width: 100px;
 
-setTimeout(() => {
-  document.getElementById("greeting").style.opacity = "0";
-}, 2500);
+  height: 100px;
 
-setTimeout(() => {
-  document.getElementById("instruction").classList.remove("hidden");
+  background: gray;
 
-  document.getElementById("instruction").style.opacity = "1";
-}, 3000);
+  border-radius: 50%;
 
-setTimeout(() => {
-  document.getElementById("instruction").style.opacity = "0";
-}, 5500);
+  margin: auto;
+}
 
-setTimeout(() => {
-  document
-    .getElementById("registration-box")
-    .classList.add("registration-show");
-}, 6000);
+.edit-btn,
+.add-btn {
+  background: #ff1493;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    document.getElementById("welcome-screen").style.display = "none";
+
+    document.getElementById("registration").classList.remove("hidden");
+  }, 4000);
+});
 
 function register() {
-  let lastName = document.getElementById("last_name").value;
+  const fullname = document.getElementById("fullname").value;
 
-  let firstName = document.getElementById("first_name").value;
+  const name = document.getElementById("name").value;
 
-  let middleName = document.getElementById("middle_name").value;
+  const patronymic = document.getElementById("patronymic").value;
 
-  let birthDate = document.getElementById("birth_date").value;
+  const birthDate = document.getElementById("birth_date").value;
 
-  let birthTime = document.getElementById("birth_time").value;
+  const birthTime = document.getElementById("birth_time").value;
 
-  if (lastName && firstName && middleName && birthDate && birthTime) {
-    alert("Регистрация успешна!");
-  } else {
-    alert("Заполните все поля!");
-  }
+  const fullNameString = `${fullname} ${name} ${patronymic}`;
+
+  // Сохранение данных
+
+  localStorage.setItem("fullname", fullNameString);
+
+  localStorage.setItem("birthDate", birthDate);
+
+  localStorage.setItem("birthTime", birthTime);
+
+  // Переход на страницу профиля
+
+  window.location.href = "profile.html";
 }
+
+// Отображение данных в профиле
+
+window.onload = function () {
+  if (document.getElementById("username")) {
+    document.getElementById("username").textContent =
+      localStorage.getItem("fullname") || "Имя пользователя";
+  }
+};
